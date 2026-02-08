@@ -1,2 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+// Console.WriteLine(StaticClassDemo.StaticIntegrer);
+
+var x=new ClassVSObject();
+Console.WriteLine(x.Myproperty);
