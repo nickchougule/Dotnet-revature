@@ -20,8 +20,8 @@
 //}
 List<ITrackable> trackables = new()
 {
-    new Truck("Ford", "F-150", 80),
-    new Truck("Volvo", "FH", 100)
+    // new Truck("Ford", "F-150", 80),
+    // new Truck("Volvo", "FH", 100)
 };
 
 foreach (var t in trackables)
@@ -30,8 +30,8 @@ foreach (var t in trackables)
 }
 List<IMaintainable> maintenanceFleet = new()
 {
-    new Truck("Ford", "F-150", 80),
-    new Truck("Volvo", "FH", 100)
+    // new Truck("Ford", "F-150", 80),
+    // new Truck("Volvo", "FH", 100)
 };
 
 foreach (var vehicle in maintenanceFleet)
