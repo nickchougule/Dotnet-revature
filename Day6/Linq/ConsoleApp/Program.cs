@@ -6,14 +6,19 @@ namespace Linq
     {
         static void Main()
         {
-            List<Customer> customers = new()
+            CustomerDataResult();
+        }
+
+
+
+        static List<Customer> customers = new()
             {
                 new Customer { CustomerId = 1, CustomerName = "Nikhil" },
-                new Customer { CustomerId = 2, CustomerName = "Rahul" },
-                new Customer { CustomerId = 3, CustomerName = "Amit" }
+                new Customer { CustomerId = 2, CustomerName = "Soham" },
+                new Customer { CustomerId = 3, CustomerName = "Vishal" }
             };
 
-            List<Order> orders = new()
+        static List<Order> orders = new()
             {
                 new Order { OrderId = 101, CustomerId = 1, OrderAmount = 1500 },
                 new Order { OrderId = 102, CustomerId = 1, OrderAmount = 2500 },
@@ -23,7 +28,10 @@ namespace Linq
             };
 
 
-            var result = customers
+
+        static void CustomerDataResult()
+        {
+            var CustomerOrder = customers
             .Join(orders,
                 c => c.CustomerId,
                 o => o.CustomerId,
@@ -39,7 +47,7 @@ namespace Linq
             });
 
 
-            foreach (var customer in result)
+            foreach (var customer in CustomerOrder)
             {
                 Console.WriteLine($"Customer: {customer.CustomerName}");
                 Console.WriteLine($"Total Orders: {customer.OrderCount}");
@@ -53,28 +61,26 @@ namespace Linq
                 Console.WriteLine();
             }
 
-
-
         }
     }
+}
 
 
-    public class Customer
-    {
-        public int CustomerId { get; set; }
-        public string CustomerName { get; set; }
-    }
+public class Customer
+{
+    public int CustomerId { get; set; }
+    public string CustomerName { get; set; }
+}
 
-    public class Order
-    {
-        public int CustomerId { get; set; }
-        public int OrderId { get; set; }
+public class Order
+{
+    public int CustomerId { get; set; }
+    public int OrderId { get; set; }
 
-        public decimal OrderAmount { get; set; }
+    public decimal OrderAmount { get; set; }
 
-
-
-    }
 
 
 }
+
+
