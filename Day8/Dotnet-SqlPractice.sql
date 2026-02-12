@@ -108,8 +108,23 @@ select * from customers;
 select * from products;
 
 select * from orders;
-
 select * from OrderItems;
+
+select * from Payments;
+
+select EmpName , Salary from Employees;
+
+select * from Employees Where salary>65000;
+
+select * from Employees order by Salary desc;
+
+select e.EmpName ,d.DeptName  
+from Employees e
+inner join Departments d
+on e.DeptId= d.DeptId;
+
+
+
 
 
 
