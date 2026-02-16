@@ -124,6 +124,21 @@ inner join Departments d
 on e.DeptId= d.DeptId;
 
 
+select c.CustomerName, o.OrderId, o.Status, O.OrderDate
+From Customers c Join Orders o
+on c.CustomerId= o.CustomerId;
+
+
+INSERT INTO Employees (EmpName, Email, Salary, DeptId)
+VALUES
+(' ', 'yogesh@company.com', 60000, 2);
+
+
+select * from Employees;
+
+
+
+
 
 
 
