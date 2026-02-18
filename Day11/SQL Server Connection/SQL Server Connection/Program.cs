@@ -60,7 +60,7 @@ try
         var query = "INSERT INTO Customers (Name, Email) VALUES ('Soham', 'Soham@gmail.com')";
         using var Command = new SqlCommand(query, Connection);
         var rowsAffected = Command.ExecuteNonQuery();
-        Console.WriteLine("Rows Inserted: " + rowsAffected);
+        Console.WriteLine("Rows Inserted: " + rowsAffected); 
     }
 
     void SqlDataAdapeterDemo()
